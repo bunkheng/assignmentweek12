@@ -10,24 +10,21 @@
                 @csrf
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <select required class="form-control form-control-user" name="category_id">
-                            <option value="">Please select one</option>
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-6">
                         <input type="text" required class="form-control form-control-user" name="title" placeholder="Title">
                     </div>
                 </div>
-
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <textarea required row="3" class="form-control form-control-user" name="content"></textarea>
+                        <input type="text" required class="form-control form-control-user" name="content" placeholder="content">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <select class="form-select" aria-label="Default select example" name='status'>
+                            <option selected>Status</option>
+                            <option value="Public">Public</option>
+                            <option value="Private">Private</option>
+                        </select>
                     </div>
                 </div>
 

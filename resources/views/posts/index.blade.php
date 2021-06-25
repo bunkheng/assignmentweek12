@@ -11,9 +11,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Category Name</th>
                             <th>Title</th>
                             <th>Content</th>
+                            <th>Status</th>
                             <th>Author</th>
                             <th>
                                 <a href="{{ route('posts.create') }}" class="btn btn-primary">+ (New)</a>
@@ -25,14 +25,9 @@
                         @foreach($posts as $post)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>
-                                    @if ( $post->category->name === null)
-                                    @else
-                                    {{ $post->category->name }}
-                                    @endif
-                                </td>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->content }}</td>
+                                <td>{{ $post->status }}</td>
                                 <td>{{ $post->author->full_name }}</td>
                                 <td>
                                     <ul>

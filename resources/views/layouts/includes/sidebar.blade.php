@@ -17,16 +17,16 @@
 
     <!-- Nav Item - Tables -->
 
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" href="{{ route('categories.list') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Categories</span></a>
-    </li>
+            <span>All Todo List</span></a>
+    </li> --}}
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('posts.index') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Posts</span></a>
+            <span>Todo List</span></a>
     </li>
 
     @if(Auth::user()->role === 'admin')
